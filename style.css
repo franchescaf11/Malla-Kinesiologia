@@ -21,7 +21,12 @@ h1 {
 
 .semestre {
   flex: 0 0 auto;
-  width: 220px;
+  width: 260px;
+  background-color: #ffffff;
+  border: 2px solid #f8d7da;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .semestre h2 {
@@ -30,7 +35,8 @@ h1 {
   padding: 10px;
   text-align: center;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 15px;
+  margin-top: 0;
 }
 
 .ramo {
@@ -40,8 +46,9 @@ h1 {
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s;
-  font-size: 14px;
+  transition: transform 0.2s;
+  font-size: 13.5px;
+  line-height: 1.4;
 }
 
 .ramo:hover {
