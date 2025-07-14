@@ -1,5 +1,3 @@
-// script.js FINAL — con nombres completos y prerrequisitos reales + diseño mejorado
-
 const malla = {
   "1° semestre": [
     { nombre: "Bases Integradas de Química, Bioquímica, Biología Celular y Genética", id: "bioquimica" },
@@ -18,7 +16,6 @@ const malla = {
     { nombre: "Principios de Evolución", id: "evolucion" },
     { nombre: "Lectura Comprensiva de Artículos Científicos", id: "lecturaComprensiva" }
   ],
-
   "3° semestre": [
     { nombre: "Fisiología de Sistemas", id: "fisioSistemas", prerreq: ["fisioGeneral"] },
     { nombre: "Bases Integradas de Infectología, Inmunología y Farmacología General", id: "inmunofarma", prerreq: ["fisioGeneral", "neuroanato"] },
@@ -27,20 +24,19 @@ const malla = {
     { nombre: "Fundamentos de la Investigación Científica", id: "fundamentosInvestigacion" },
     { nombre: "Educación Física 1", id: "educFisica1" }
   ],
-
   "4° semestre": [
     { nombre: "Fisiopatología y Farmacología de Sistemas", id: "fisiofarma", prerreq: ["inmunofarma", "fisioSistemas"] },
     { nombre: "Examen de la Condición Física y la Conducta Motora", id: "examenFisicaConducta", prerreq: ["examenKinesico"] },
     { nombre: "Procedimientos Terapéuticos Básicos y Generales", id: "procedimientos", prerreq: ["movimiento", "examenKinesico"] },
     { nombre: "Kinesiología del Desarrollo Psicomotor", id: "desarrolloPsicomotor", prerreq: ["controlMotor"] },
     { nombre: "Lectura Crítica de Artículos Científicos", id: "lecturaCritica", prerreq: ["lecturaComprensiva"] },
-    { nombre: "Análisis Epidemiológico", id: "epidemiologia" }
+    { nombre: "Análisis Epidemiológico", id: "epidemiologia" },
+    { nombre: "Análisis Bioinstrumental del Movimiento Humano", id: "bioinstrumental" }
   ],
-
   "5° semestre": [
     { nombre: "Efectos de la actividad Física en la salud", id: "efectosFisica", prerreq: ["examenFisicaConducta", "fisiofarma"] },
     { nombre: "Evaluación e Intervención en la Neurokinesiología 1", id: "neurokine1", prerreq: ["desarrolloPsicomotor"] },
-    { nombre: "Evaluación e Intervención en Cuidados Respiratorios 1", id: "respiratorio1", prerreq: ["examenFisicaConducta"] },
+    { nombre: "Evaluación e Intervención en Cuidados Respiratorios 1", id: "respiratorio1", prerreq: ["fisiofarma"] },
     { nombre: "Evaluación e Intervención en Musculoesquelético 1", id: "musculoesqueletico1", prerreq: ["procedimientos"] },
     { nombre: "Revisión Bibliográfica", id: "revisionBiblio", prerreq: ["lecturaCritica"] },
     { nombre: "Análisis del Modelo de Salud Chileno", id: "modeloSalud", prerreq: ["epidemiologia"] },
@@ -48,7 +44,6 @@ const malla = {
     { nombre: "Educación Física 2", id: "educFisica2", prerreq: ["educFisica1"] },
     { nombre: "Inglés 4", id: "ingles4" }
   ],
-
   "6° semestre": [
     { nombre: "Evaluación e Intervención en la Neurokinesiología 2", id: "neurokine2", prerreq: ["neurokine1"] },
     { nombre: "Evaluación e Intervención en Cuidados Respiratorios 2", id: "respiratorio2", prerreq: ["respiratorio1"] },
@@ -58,7 +53,6 @@ const malla = {
     { nombre: "Responsabilidad del Ejercicio Profesional", id: "responsabilidad" },
     { nombre: "Actividad Física y Deportes", id: "actividadFisica", prerreq: ["educFisica2", "efectosFisica"] }
   ],
-
   "7° semestre": [
     { nombre: "Intervención Profesional en Contexto 1", id: "contexto1", prerreq: ["efectosFisica", "respiratorio2", "musculoesqueletico2", "neurokine2"] },
     { nombre: "Estrategias Deportivas y Recreativas", id: "estrategias", prerreq: ["actividadFisica"] },
@@ -68,7 +62,6 @@ const malla = {
     { nombre: "Conceptos Básicos de Administración en Salud", id: "adminSalud1" },
     { nombre: "Metodologías de Enseñanza Aprendizaje", id: "metodologias" }
   ],
-
   "8° semestre": [
     { nombre: "Intervención Profesional en Contexto 2", id: "contexto2", prerreq: ["efectosFisica", "respiratorio2", "musculoesqueletico2", "neurokine2"] },
     { nombre: "Estrategias Deportivas y Recreativas Aplicadas", id: "estrategiasAplicadas", prerreq: ["estrategias"] },
@@ -79,7 +72,6 @@ const malla = {
     { nombre: "Aplicación Básica de Metodologías Docentes", id: "aplicacionMetodologias", prerreq: ["metodologias"] },
     { nombre: "Modulo Integrado Interdisciplinario y Multiprofesional 2", id: "modulo2", prerreq: ["modulo1"] }
   ],
-
   "5° año (anual)": [
     { nombre: "Intervención Profesional 1", id: "intervencion1", prerreq: ["contexto2"] },
     { nombre: "Intervención Profesional 2", id: "intervencion2", prerreq: ["intervencion1"] },
